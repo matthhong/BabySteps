@@ -1,5 +1,15 @@
 A summary can be found in the docstring for BabySteps.py.
 
+-----
+BabyCenter is an active online forum where users can ask questions about parenting and expect answers from other parents. Our module attempts to bring Pathways closer to the users of BabyCenter by providing them with links to questions on the site, pertaining to topics of their interests, but which haven't been answered yet.
+
+There are subcommunities within BabyCenter dedicated to certain issues, but not all posts contained within a subcommunity is going to be useful, and a lot outside them may be. Our module can find relevant posts from all around the forum.
+
+We accomplish this by calculating the relative frequencies of words in posts which pertain to a topic of Pathway's concern, but have already been resolved. Then, for a given new post, we take the average of the relative frequencies of words associated with that post. We return a number of posts in the order of their scores, if they contain more than a hundred words.
+
+In addition to helping locate important posts, the module can also tell us about the use of language on BabyCenter. While searching for posts relating to torticollis, also known as wry neck, and plagiocephaly, also known as flat head syndrome, we found that the top seven most frequent terms corresponded, in order, for the two searches: flat, pt, therapy, physical, correct, head, specialist. That 'flat' was the frequent term related to the query 'torticollis,' even though torticollis isn't a condition of a flatness of a body part, tells us that the users are mostly concerned about the condition only as it relates to plagiocephaly.
+-----
+
 Only works with a Mac OS Lion, Mountain Lion, or Maverick.
 Where there are quotation marks, execute the instruction without them.
 
@@ -32,7 +42,7 @@ Where there are quotation marks, execute the instruction without them.
 	a. Open Terminal
 	b. Type "cd", followed by a space, followed by the directory of the unzipped folder
 	c. Type "python"
-	d. Type "import BabySteps as bss"
+	d. Type "import BabySteps as bbs"
 
 2. Creating an Investigator of torticollis named Matt.
 	a. Type "Matt = bbs.Investigator('torticollis', 5)". 
@@ -59,14 +69,3 @@ Where there are quotation marks, execute the instruction without them.
 5. Seeing which words best express a need for help on torticollis.
 	a. Type "TC.weights_dictionary()".
 		- This will return words in order of expressiveness.
-
-
-*My speech at McTrib*
-
-BabyCenter is an active online forum where users can ask questions about parenting and expect answers from other parents. Our module attempts to bring Pathways closer to the users of BabyCenter by providing them with links to questions on the site, pertaining to topics of their interests, but which haven't been answered yet.
-
-There are subcommunities within BabyCenter dedicated to certain issues, but not all posts contained within a subcommunity is going to be useful, and a lot outside them may be. Our module can find relevant posts from all around the forum.
-
-We accomplish this by calculating the relative frequencies of words in posts which pertain to a topic of Pathway's concern, but have already been resolved. Then, for a given new post, we take the average of the relative frequencies of words associated with that post. We return a number of posts in the order of their scores, if they contain more than a hundred words.
-
-In addition to helping locate important posts, the module can also tell us about the use of language on BabyCenter. While searching for posts relating to torticollis, also known as wry neck, and plagiocephaly, also known as flat head syndrome, we found that the top seven most frequent terms corresponded, in order, for the two searches: flat, pt, therapy, physical, correct, head, specialist. That 'flat' was the frequent term related to the query 'torticollis,' even though torticollis isn't a condition of a flatness of a body part, tells us that the users are mostly concerned about the condition only as it relates to plagiocephaly.
